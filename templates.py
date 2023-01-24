@@ -38,7 +38,7 @@ def login_page():
     """
 
     return _wrapper(r"""
-    <h1> Welcome! </h1>
+    <h1> Welcome you! </h1>
 
     <form method="POST" action="login.py">
         <label> <span>Username:</span> <input autofocus type="text" name="username"></label> <br>
