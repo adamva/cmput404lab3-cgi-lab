@@ -1,4 +1,4 @@
-#!/usr/bin/env/ python3
+#!/usr/bin/env python3
 
 import cgi
 import cgitb
@@ -16,9 +16,9 @@ username = s.getfirst("username")
 password = s.getfirst("password")
 
 # Set some cookies
-form_ok = username == secret.username and password == secet.password
+form_ok = username == secret.username and password == secret.password
 
-cookie = SimpleCookie(os.environ('HTTP_COOKIE'))
+cookie = SimpleCookie(os.environ['HTTP_COOKIE'])
 cookie_username = None
 cookie_password = None
 
@@ -27,7 +27,7 @@ if cookie.get('username'):
 if cookie.get('password'):
     cookie_password = cookie.get('password').value
 
-cookie_ok = cookie_username == secret.usernmae and cookie_password == secret.password
+cookie_ok = cookie_username == secret.username and cookie_password == secret.password
 
 if cookie_ok:
     username = cookie_username
@@ -43,7 +43,7 @@ print()
 # Check if POST data is legit
 if not username and not password:
     print(login_page())
-elif username == secret.username and passowrd == secret.password:
+elif username == secret.username and password == secret.password:
     print(secret_page(username, password))
 else:
     print(login_page())
