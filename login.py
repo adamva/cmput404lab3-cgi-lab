@@ -35,8 +35,8 @@ if cookie_ok:
     
 print("Content-Type: text/html")
 if form_ok:
-    print("Set-Cookie: username={username}")
-    print("Set-Cookie: password={password}")
+    print(f"Set-Cookie: username={username}")
+    print(f"Set-Cookie: password={password}")
 
 print()
 
